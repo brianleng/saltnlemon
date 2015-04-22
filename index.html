@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>The Assembly Co.</title>
+    <link href="Content/superslides.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="slides" style="display: none;">
+        <div class="slides-container">
+            <img src="img/logofull.jpg" alt="Cinelli">
+            <div class="mymail">
+                <!--============== Contact start ================-->
+
+                <div class="container">
+                    <div class="content fade2 transition">
+
+                        <h2>Get in touch</h2>
+                        <div class="small-separator"></div>
+
+
+                        <p class="align-just" style="text-align:center">Feel free to buzz us up! We are more than happy to light all the queries up!</p>
+
+                        <div class="contact-info">
+
+                            <div class="grid-2 transition">
+                                <i class="fa fa-mobile fa-2x"></i>
+                                <br><br> <a href="tel:+6563363639">+65 6336 3639</a>
+                            </div>
+
+                            <div class="grid-2 transition lanch-form">
+                                <a href="mailto:INFO@ALPHAATELIER.COM"><i class="fa fa-envelope-o fa-2x"></i></a>
+                                <br><br><a href="mailto:INFO@ALPHAATELIER.COM">INFO@ALPHAATELIER.COM </a>
+                            </div>
+
+                            <div class="grid-2 transition">
+                                <i class="fa fa-globe fa-2x"></i>
+                                <br><br><a href="https://www.google.com.sg/maps/place/The+Assembly+Co./@1.2780025,103.8434801,18z/data=!4m2!3m1!1s0x0:0xb1c8e00f78b6a24e" target="_blank">Singapore 088524 / 104A</a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--Contact end -->
+            </div>
+            <div class="myinfo "><img src="/img/hours.jpg" alt="" /></div>
+        </div>
+        <nav class="slides-navigation icon-stack ">
+            <a href="#" class="next info navigation col-sm-5" style="display: none;"><i class="fa fa-envelope-o fa-1x"></i></a>
+            <a href="#" class="prev mail navigation col-sm-5" style="display: none;"><i class="fa fa-info fa-1x"></i></a>
+            <a href="#" class="prev mainprev navigation col-sm-5" style="display: none;"><i class="fa fa-reply fa-1x"></i></a>
+            <a href="#" class="next mainnext navigation col-sm-5" style="display: none;"><i class="fa fa-share fa-1x"></i></a>
+        </nav>
+    </div>
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/jquery.animate-enhanced.min.js"></script>
+    <script src="Scripts/jquery.easing.1.3.js"></script>
+    <script src="Scripts/jquery.superslides.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script>
+        /*var mySwiper = $('#slides').superslides({
+            hashchange: true,
+            initialSlide: 1
+        });*/
+        showNav();
+        $(function () {
+            $('#slides').superslides({
+                initialSlide: 1,
+                pagination: false
+            }).fadeIn(1500);
+        });
+        $('.mail').click(function () {
+            hideNav();
+            $('.mainnext').fadeIn(1500);
+        });
+        $('.info').click(function () {
+            hideNav();
+            $('.mainprev').fadeIn(1500);
+        });
+        $('.mainprev').click(function () {
+            showNav();
+        });
+        $('.mainnext').click(function () {
+            showNav();
+        });
+        function hideNav() {
+            $('.mail').hide();
+            $('.info').hide();
+        }
+        function hideNav() {
+            $('.mail').hide();
+            $('.info').hide();
+        }
+        function showNav() {
+            $('.mainprev').hide();
+            $('.mainnext').hide();
+            $('.mail').fadeIn(1500);
+            $('.info').fadeIn(1500);
+        }
+    </script>
+</body>
+</html>
